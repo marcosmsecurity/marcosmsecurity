@@ -10,7 +10,7 @@
 
 • Graduate student in Information Security.
 
-• Self-taught profile, affinity with low level of software and hardware.
+• Self-taught profile, affinity with low level of software.
 
 ##
 ## Languages ​​I work in
