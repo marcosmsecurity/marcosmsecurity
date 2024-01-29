@@ -29,28 +29,21 @@
 
 <div style="display: inline_block"><br/>
 <img align="center" alt="html5" src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC.svg?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white"/>
+
 <div style="display: inline_block"><br/>
 <img align="center" alt="html5" src="https://img.shields.io/badge/Proteus-1C79B3.svg?style=for-the-badge&logo=Proteus&logoColor=white"/>
 <div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="
-https://img.shields.io/badge/Arduino-00878F.svg?style=for-the-badge&logo=Arduino&logoColor=white"/>
+<img align="center" alt="html5" src="https://img.shields.io/badge/Arduino-00878F.svg?style=for-the-badge&logo=Arduino&logoColor=white"/>
+
 
 ## My domain systems
+<div style="display: inline_block"><br/>
+<img align="center" alt="html5" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"/>
 
 <div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="
-https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white
-"/>
-
+<img align="center" alt="html5" src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
 <div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="
-https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white
-"/>
-
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="
-https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black
-"/>
+<img align="center" alt="html5" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
 
 
 ## Constantly evolving through research and studies, what problem can I help you solve?
