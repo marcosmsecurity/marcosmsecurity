@@ -1,65 +1,184 @@
-### Hi, my name is Monteiro! 🖖
+<!-- Header -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0b3d91,100:1f6feb&height=190&section=header&text=Marcos%20Monteiro&fontSize=44&fontColor=ffffff&fontAlignY=36&desc=Computer%20Engineering%20%E2%80%A2%20Network%20Infrastructure%20%E2%80%A2%20Cybersecurity&descSize=16&descAlignY=58&animation=fadeIn" width="100%"/>
+</p>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcosmpro/)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC8MYncZMfw-zGzoefx7pi3w)
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=640&lines=Hi%2C+I'm+Marcos+Monteiro!+%F0%9F%96%96;Network+%26+Infrastructure+Analyst;Building+my+way+to+Cybersecurity+Engineer;From+the+solder+iron+to+the+SIEM+%E2%9A%A1;pfSense+%C2%B7+Wazuh+%C2%B7+Active+Directory+%C2%B7+IoT" alt="Typing SVG"/>
+</p>
 
-![marcosmsecurity's Stats](https://github-readme-stats.vercel.app/api?username=marcosmsecurity&theme=dark&show_icons=true&hide_border=false&count_private=true)
+<p align="center">
+  <a href="https://www.linkedin.com/in/marcosmpro/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="https://www.youtube.com/channel/UC8MYncZMfw-zGzoefx7pi3w"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
+  <img src="https://img.shields.io/badge/Focus-Infra%20%26%20OT%20Security-1f6feb?style=for-the-badge&labelColor=161b22"/>
+  <img src="https://img.shields.io/badge/Eng.%20Graduation-2030-238636?style=for-the-badge&labelColor=161b22"/>
+</p>
 
-## Profile
-• Electronic technician trained and regulated by the Federal Council of Industrial Technicians. Skills focused on board repair, reverse engineering, and software and hardware development.
+---
 
-• Graduate student in Information Security.
+## `$ whoami`
 
-• Self-taught profile, affinity with low level of software.
+```python
+class MarcosMonteiro:
+    role        = "Network & Infrastructure Analyst"
+    target      = "Cybersecurity Engineer"            # infrastructure & OT/IoT security
+    education   = ["B.Eng. Computer Engineering (2030)",
+                   "Systems Analysis & Development",
+                   "Graduate studies in Information Security"]
+    background  = "Electronics technician (CFT): board repair, reverse engineering, low level"
+    studying    = ["CCNA v2.0", "SQL", "Python", "Bash"]   # roadmap phase 1
+    lab         = "pfSense + Wazuh + Active Directory + Kali + IoT bench"
+    motto       = "If it has a pin or a port, I want to know how it works - and how it breaks."
+```
 
-##
-## Languages ​​I work in
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/assembly%20script-%23000000.svg?style=for-the-badge&logo=assemblyscript&logoColor=white"/>
-</div>
+I started at the bench, with a soldering iron, schematics and boards to bring back to life. Today I keep networks, servers and monitoring running, and I'm building, one commit at a time, the path to **cybersecurity engineering**, with a focus on where IT meets the physical world: infrastructure, IoT and OT.
 
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white"/>
-</div>
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
+---
 
-## IDE and Frameworks
+## 🧪 Home lab
 
+Everything I study becomes practice here. Isolated network, real attacks, real detections.
 
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC.svg?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white"/>
+```mermaid
+flowchart LR
+  subgraph HOST["🖥️ Ubuntu host · VirtualBox"]
+    PF["🔥 pfSense<br/>firewall / segmentation"]
+    DC["🪟 Windows Server<br/>Active Directory"]
+    W10["💻 Windows 10<br/>domain client"]
+    KALI["🐉 Kali Linux<br/>attacker"]
+    MS["🎯 Metasploitable<br/>target"]
+    WZ["🛡️ Wazuh<br/>SIEM"]
+    PF --- DC
+    PF --- W10
+    PF --- KALI
+    PF --- MS
+    DC -. agent .-> WZ
+    W10 -. agent .-> WZ
+    KALI -. agent .-> WZ
+  end
+  subgraph BENCH["🔌 IoT bench"]
+    RP["RP2040<br/>signal generator"] -- UART --> ESP["ESP32<br/>Wi-Fi bridge"]
+    OSC["📟 Oscilloscope"] -. probe .-> RP
+  end
+  ESP -- Wi-Fi --> J7["📱 Debian + Zabbix<br/>on a repurposed Android"]
+```
 
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/Proteus-1C79B3.svg?style=for-the-badge&logo=Proteus&logoColor=white"/>
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/Arduino-00878F.svg?style=for-the-badge&logo=Arduino&logoColor=white"/>
+| Layer | Stack |
+|---|---|
+| Network & firewall | pfSense, VLANs, isolated 192.168.15.0/24 lab network |
+| Detection | Wazuh SIEM, Sysmon, Windows event logs |
+| Identity | Windows Server 2019 Active Directory domain |
+| Offense (lab only) | Kali Linux vs. Metasploitable and DVWA |
+| Monitoring | Zabbix + MariaDB on Debian (Termux) running on an Android phone |
+| Hardware | RP2040, ESP32, FNIRSI oscilloscope, breadboard |
+| Automation | Bash + systemd timers: VM snapshots, backups, study tracking, daily commits |
 
+---
 
-## My domain systems
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"/>
+## 🧰 Tech stack
 
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
-<div style="display: inline_block"><br/>
-<img align="center" alt="html5" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
+**Languages & scripting**
 
+<p>
+  <img src="https://skillicons.dev/icons?i=py,c,bash,powershell,mysql,sqlite,md&theme=dark"/>
+  <img src="https://img.shields.io/badge/Assembly-000000?style=for-the-badge&logo=assemblyscript&logoColor=white" height="48"/>
+</p>
 
-## Constantly evolving through research and studies, what problem can I help you solve?
-## 
+**Systems & infrastructure**
 
+<p>
+  <img src="https://skillicons.dev/icons?i=linux,ubuntu,debian,kali,windows,docker,git,github&theme=dark"/>
+</p>
 
+<p>
+  <img src="https://img.shields.io/badge/Cisco%20Networking-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white"/>
+  <img src="https://img.shields.io/badge/pfSense-212121?style=for-the-badge&logo=pfsense&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Wazuh-3595F5?style=for-the-badge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Zabbix-D40000?style=for-the-badge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Active%20Directory-0078D6?style=for-the-badge&logo=windows&logoColor=white"/>
+  <img src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
+</p>
 
+**Hardware & embedded**
 
+<p>
+  <img src="https://skillicons.dev/icons?i=arduino,raspberrypi&theme=dark"/>
+  <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" height="48"/>
+  <img src="https://img.shields.io/badge/Proteus-1C79B3?style=for-the-badge&logoColor=white" height="48"/>
+</p>
 
+**Tools**
 
+<p>
+  <img src="https://skillicons.dev/icons?i=vscode&theme=dark"/>
+  <img src="https://img.shields.io/badge/Packet%20Tracer-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" height="48"/>
+  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white" height="48"/>
+  <img src="https://img.shields.io/badge/KeePassXC-6CAC4D?style=for-the-badge&logo=keepassxc&logoColor=white" height="48"/>
+</p>
 
+---
 
+## 🗺️ Roadmap
 
+```text
+2026 ┤ ▓▓▓▓░ Phase 1  CCNA · SQL · Linux & Bash · Python              ◄ you are here
+2027 ┤ ░░░░░ Phase 2  CCNA exam level · advanced SQL · Ansible · network automation
+2028 ┤ ░░░░░ Phase 3  Security+ V8 · firewall/IDS/VPN · hardening · Active Directory
+     ┤ ░░░░░ Phase 4  AWS · containers · AppSec · IoT security
+2029 ┤ ░░░░░ Phase 5  Detection & response · SIEM · detection-as-code · DevSecOps
+     ┤ ░░░░░ Phase 6  Cloud security engineering · AI/ML for security
+2030 ┤ ░░░░░ Phase 7  AI security · OT/IoT security · thesis → 🎓 Computer Engineer
+```
 
+## 📌 Projects
 
+| # | Project | Stack | Status |
+|---|---|---|---|
+| 1 | Lab network inventory | Bash · Python · SQLite | 🟡 in progress |
+| 2 | Lab automation | Python · Ansible · Git | ⚪ planned |
+| 3 | Wazuh alert triage tool | Python · pytest · Wazuh API | ⚪ planned |
+| 4 | Secure web app vs. OWASP Top 10 | FastAPI · Docker | ⚪ planned |
+| 5 | DevSecOps pipeline + versioned detections | GitHub Actions · Sigma | ⚪ planned |
+| 6 | Security-as-code on AWS | Terraform · AWS | ⚪ planned |
 
+---
 
+## 📊 GitHub activity
 
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=marcosmsecurity&theme=github_dark&show_icons=true&count_private=true&hide_border=true" height="165"/>
+  <img src="https://streak-stats.demolab.com?user=marcosmsecurity&theme=github-dark-blue&hide_border=true" height="165"/>
+</p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/marcosmsecurity/marcosmsecurity/output/github-snake-dark.svg"/>
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/marcosmsecurity/marcosmsecurity/output/github-snake.svg"/>
+  </picture>
+</p>
+
+---
+
+<details>
+<summary><b>🇧🇷 Em português</b></summary>
+
+<br>
+
+**Quem sou:** analista de redes e infraestrutura, estudante de Engenharia de Computação (formatura prevista em 2030) e de Análise e Desenvolvimento de Sistemas, pós-graduando em Segurança da Informação e técnico em eletrônica (CFT), com experiência em reparo de placas, engenharia reversa e baixo nível.
+
+**Para onde vou:** engenharia de cibersegurança, com foco em infraestrutura e OT/IoT, onde a TI encontra o mundo físico.
+
+**Estudando agora:** CCNA v2.0, SQL, Python e Bash (fase 1 do roadmap).
+
+**Laboratório:** pfSense, Wazuh, Active Directory, Kali e Metasploitable em rede isolada, Zabbix num celular Android reaproveitado e uma bancada IoT com RP2040, ESP32 e osciloscópio. Tudo automatizado com Bash: snapshots, backups, registro de estudo e commits diários.
+
+**Projetos:** cada fase do roadmap termina com um projeto publicado aqui.
+
+</details>
+
+<p align="center"><i>Constantly evolving through research and study. What problem can I help you solve?</i></p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,50:0b3d91,100:0d1117&height=110&section=footer" width="100%"/>
+</p>
