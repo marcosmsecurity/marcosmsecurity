@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=640&lines=Hi%2C+I'm+Marcos+Monteiro!+%F0%9F%96%96;Network+%26+Infrastructure+Analyst;Building+my+way+to+Cybersecurity+Engineer;From+the+solder+iron+to+the+SIEM+%E2%9A%A1;pfSense+%C2%B7+Wazuh+%C2%B7+Active+Directory+%C2%B7+IoT" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=640&lines=Hi%2C+I'm+Marcos+Monteiro!+%F0%9F%96%96;Network+%26+Infrastructure+Analyst;Building+my+way+to+Cybersecurity+Engineer;From+the+solder+iron+to+the+SIEM+%E2%9A%A1" alt="Typing SVG"/>
 </p>
 
 <p align="center">
@@ -26,52 +26,10 @@ class MarcosMonteiro:
                    "Systems Analysis & Development",
                    "Graduate studies in Information Security"]
     background  = "Electronics technician (CFT): board repair, reverse engineering, low level"
-    studying    = ["CCNA v2.0", "SQL", "Python", "Bash"]   # roadmap phase 1
-    lab         = "pfSense + Wazuh + Active Directory + Kali + IoT bench"
     motto       = "If it has a pin or a port, I want to know how it works - and how it breaks."
 ```
 
 I started at the bench, with a soldering iron, schematics and boards to bring back to life. Today I keep networks, servers and monitoring running, and I'm building, one commit at a time, the path to **cybersecurity engineering**, with a focus on where IT meets the physical world: infrastructure, IoT and OT.
-
----
-
-## 🧪 Home lab
-
-Everything I study becomes practice here. Isolated network, real attacks, real detections.
-
-```mermaid
-flowchart LR
-  subgraph HOST["🖥️ Ubuntu host · VirtualBox"]
-    PF["🔥 pfSense<br/>firewall / segmentation"]
-    DC["🪟 Windows Server<br/>Active Directory"]
-    W10["💻 Windows 10<br/>domain client"]
-    KALI["🐉 Kali Linux<br/>attacker"]
-    MS["🎯 Metasploitable<br/>target"]
-    WZ["🛡️ Wazuh<br/>SIEM"]
-    PF --- DC
-    PF --- W10
-    PF --- KALI
-    PF --- MS
-    DC -. agent .-> WZ
-    W10 -. agent .-> WZ
-    KALI -. agent .-> WZ
-  end
-  subgraph BENCH["🔌 IoT bench"]
-    RP["RP2040<br/>signal generator"] -- UART --> ESP["ESP32<br/>Wi-Fi bridge"]
-    OSC["📟 Oscilloscope"] -. probe .-> RP
-  end
-  ESP -- Wi-Fi --> J7["📱 Debian + Zabbix<br/>on a repurposed Android"]
-```
-
-| Layer | Stack |
-|---|---|
-| Network & firewall | pfSense, VLANs, isolated 192.168.15.0/24 lab network |
-| Detection | Wazuh SIEM, Sysmon, Windows event logs |
-| Identity | Windows Server 2019 Active Directory domain |
-| Offense (lab only) | Kali Linux vs. Metasploitable and DVWA |
-| Monitoring | Zabbix + MariaDB on Debian (Termux) running on an Android phone |
-| Hardware | RP2040, ESP32, FNIRSI oscilloscope, breadboard |
-| Automation | Bash + systemd timers: VM snapshots, backups, study tracking, daily commits |
 
 ---
 
@@ -119,31 +77,6 @@ flowchart LR
 
 ---
 
-## 🗺️ Roadmap
-
-```text
-2026 ┤ ▓▓▓▓░ Phase 1  CCNA · SQL · Linux & Bash · Python              ◄ you are here
-2027 ┤ ░░░░░ Phase 2  CCNA exam level · advanced SQL · Ansible · network automation
-2028 ┤ ░░░░░ Phase 3  Security+ V8 · firewall/IDS/VPN · hardening · Active Directory
-     ┤ ░░░░░ Phase 4  AWS · containers · AppSec · IoT security
-2029 ┤ ░░░░░ Phase 5  Detection & response · SIEM · detection-as-code · DevSecOps
-     ┤ ░░░░░ Phase 6  Cloud security engineering · AI/ML for security
-2030 ┤ ░░░░░ Phase 7  AI security · OT/IoT security · thesis → 🎓 Computer Engineer
-```
-
-## 📌 Projects
-
-| # | Project | Stack | Status |
-|---|---|---|---|
-| 1 | Lab network inventory | Bash · Python · SQLite | 🟡 in progress |
-| 2 | Lab automation | Python · Ansible · Git | ⚪ planned |
-| 3 | Wazuh alert triage tool | Python · pytest · Wazuh API | ⚪ planned |
-| 4 | Secure web app vs. OWASP Top 10 | FastAPI · Docker | ⚪ planned |
-| 5 | DevSecOps pipeline + versioned detections | GitHub Actions · Sigma | ⚪ planned |
-| 6 | Security-as-code on AWS | Terraform · AWS | ⚪ planned |
-
----
-
 ## 📊 GitHub activity
 
 <p align="center">
@@ -168,12 +101,6 @@ flowchart LR
 **Quem sou:** analista de redes e infraestrutura, estudante de Engenharia de Computação (formatura prevista em 2030) e de Análise e Desenvolvimento de Sistemas, pós-graduando em Segurança da Informação e técnico em eletrônica (CFT), com experiência em reparo de placas, engenharia reversa e baixo nível.
 
 **Para onde vou:** engenharia de cibersegurança, com foco em infraestrutura e OT/IoT, onde a TI encontra o mundo físico.
-
-**Estudando agora:** CCNA v2.0, SQL, Python e Bash (fase 1 do roadmap).
-
-**Laboratório:** pfSense, Wazuh, Active Directory, Kali e Metasploitable em rede isolada, Zabbix num celular Android reaproveitado e uma bancada IoT com RP2040, ESP32 e osciloscópio. Tudo automatizado com Bash: snapshots, backups, registro de estudo e commits diários.
-
-**Projetos:** cada fase do roadmap termina com um projeto publicado aqui.
 
 </details>
 
